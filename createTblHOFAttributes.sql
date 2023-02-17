@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS HOFAttributes;
 GO
 
 CREATE TABLE HOFAttributes (
-    cis_id INT,
+    cis_id INT NOT NULL,
     impact INT NOT NULL,
     purposeFulfilled INT NOT NULL,
     humourValue INT NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE HOFAttributes (
     monetaryValue DECIMAL(16,2) NOT NULL,
     HOFValue DECIMAL(5,2) NULL,
 
-    CONSTRAINT HOFAttributes_PK PRIMARY KEY CLUSTERED  (cis_id),
+    
     
     CONSTRAINT impactInterval CHECK(impact>=-100 AND impact<=100),
     CONSTRAINT purposeFulfilledInterval CHECK(purposeFulfilled>=-100 AND purposeFulfilled<=100),
@@ -25,3 +25,6 @@ CREATE TABLE HOFAttributes (
 -- Unsure of constraint for HOFValue
     CONSTRAINT positive_money CHECK(monetaryValue>=0)
 )
+
+ALTER TABLE HOFAttributes 
+ADD CONSTRAINT HOFAttributes_PK PRIMARY KEY CLUSTERED  (cis_id)
