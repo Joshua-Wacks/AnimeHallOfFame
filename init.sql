@@ -17,9 +17,7 @@ CREATE TABLE [dbo].[anime_series] (
     [anime_series_id] int IDENTITY(1,1) NOT NULL,
     [anime_series_name] varchar(120),
     [anime_series_description] varchar(8000),
-    [anime_series_start_date] date,
     [anime_series_ongoing] bit,
-    [anime_series_rating] tinyint
 )
 GO
 
