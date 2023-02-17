@@ -87,7 +87,7 @@ GO
 ALTER TABLE character_in_season
     ADD CONSTRAINT anime_character_season_id PRIMARY KEY (cis_id),
     FOREIGN KEY (character_id) REFERENCES anime_character(character_id),
-    FOREIGN KEY (anime_series_id, season_number) REFERENCES AnimeSeason(anime_series_id, season_number)
+    FOREIGN KEY (anime_series_id, season_number) REFERENCES anime_season(anime_series_id, season_number)
 ;
 GO
 
