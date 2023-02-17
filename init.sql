@@ -13,63 +13,61 @@ GO
 SET NOCOUNT ON;
 GO
 
-CREATE TABLE anime_series (
-    anime_series_id int IDENTITY(1,1) NOT NULL,
-    anime_series_name varchar(120),
-    anime_series_description varchar(8000),
-    anime_series_start_date date,
-    ongoing bit,
-    rating tinyint
+CREATE TABLE [dbo].[anime_series] (
+    [anime_series_id] int IDENTITY(1,1) NOT NULL,
+    [anime_series_name] varchar(120),
+    [anime_series_description] varchar(8000),
+    [anime_series_start_date] date,
+    [anime_series_ongoing] bit,
+    [anime_series_rating] tinyint
 )
 GO
 
-CREATE TABLE [dbo].[AnimeSeason]
+CREATE TABLE [dbo].[anime_season]
 (
-  [anime_series_id] INT NOT NULL,
-  [season_number] INT NOT NULL,
-  [Episodes] INT NOT NULL,
-  [EpisodeDuration] TIME(0) NOT NULL,
-  [Rating] DECIMAL(3,1) NOT NULL,
-  [YearReleased] INT NOT NULL,
+  [anime_series_id] int NOT NULL,
+  [anime_season_number] int NOT NULL,
+  [anime_season_episodes] int NOT NULL,
+  [anime_season_episode_duration] time(0) NOT NULL,
+  [anime_season_rating] decimal(3,1) NOT NULL,
+  [anime_season_start_date] int NOT NULL,
 );
 GO
 
-CREATE TABLE anime_character (
-    character_id int IDENTITY(1,1),
-    character_name varchar(50) NOT NULL,
-    character_birthyear smallint NOT NULL,
-    fk_to_bridge_entity int NOT NULL
+CREATE TABLE [dbo].[anime_character] (
+    [anime_character_id] int IDENTITY(1,1),
+    [anime_character_name] varchar(50) NOT NULL,
+    [anime_character_birthyear] smallint NOT NULL,
+    [fk_to_bridge_entity] int NOT NULL
 );
 GO
 
-CREATE TABLE dbo.CharacterInSeason (
-	cis_id int IDENTITY(1,1)  NOT NULL,
-	character_id int NOT NULL,
-	anime_series_id int NOT NULL, 
-	season_number int NOT NULL,
+CREATE TABLE [dbo].[character_in_season] (
+	[character_in_season_id] int IDENTITY(1,1) NOT NULL,
+	[anime_character_id] int NOT NULL,
+	[anime_series_id] int NOT NULL, 
+	[anime_season_number] int NOT NULL,
 );
 GO
 
-CREATE TABLE HOFAttributes (
-    cis_id INT NOT NULL,
-    impact INT NOT NULL,
-    purposeFulfilled INT NOT NULL,
-    humourValue INT NOT NULL,
-    hairStyle INT NOT NULL,
-    loveLife INT NOT NULL,
-    monetaryValue DECIMAL(16,2) NOT NULL,
-    HOFValue DECIMAL(5,2) NULL,
-
+CREATE TABLE [dbo].[hof_attributes] (
+    [hof_attributes_id] int IDENTITY(1,1) NOT NULL,
+    [hof_attributes_impact] int NOT NULL,
+    [hof_attributes_purpose_fulfilled] int NOT NULL,
+    [hof_attributes_humour] int NOT NULL,
+    [hof_attributes_hairstyle] int NOT NULL,
+    [hof_attributes_lovelife] int NOT NULL,
+    [hof_attributes_networth] decimal(16,2) NOT NULL,
+    [hof_attributes_hof_average] decimal(5,2) NULL,
     
-    
-    CONSTRAINT impactInterval CHECK(impact>=-100 AND impact<=100),
-    CONSTRAINT purposeFulfilledInterval CHECK(purposeFulfilled>=-100 AND purposeFulfilled<=100),
-    CONSTRAINT humourValuetInterval CHECK(humourValue>=-100 AND humourValue<=100),
-    CONSTRAINT hairStyleInterval CHECK(hairStyle>=-100 AND hairStyle<=100),
-    CONSTRAINT loveLifeInterval CHECK(loveLife>=-100 AND loveLife<=100),
-    CONSTRAINT monetaryValueInterval CHECK(monetaryValue>=-100 AND monetaryValue<=100),
--- Unsure of constraint for HOFValue
-    CONSTRAINT positive_money CHECK(monetaryValue>=0)
+    CONSTRAINT impact_interval CHECK(hof_attributes_impact>=-100 AND hof_attributes_impact<=100),
+    CONSTRAINT purpose_fulfilled_interval CHECK(hof_attributes_purpose_fulfilled>=-100 AND hof_attributes_purpose_fulfilled<=100),
+    CONSTRAINT humour_interval CHECK(hof_attributes_humour>=-100 AND hof_attributes_humour<=100),
+    CONSTRAINT hairstyle_interval CHECK(hof_attributes_hairstyle>=-100 AND hof_attributes_hairstyle<=100),
+    CONSTRAINT lovelife_interval CHECK(hof_attributes_lovelife>=-100 AND hof_attributes_lovelife<=100),
+    CONSTRAINT networth_interval CHECK(hof_attributes_networth>=-100 AND hof_attributes_networth<=100),
+-- Unsure of constraint for hof_attributes_hof_average
+    CONSTRAINT positive_money CHECK(hof_attributes_net_worth>=0)
 )
 ;
 GO
@@ -79,25 +77,25 @@ ALTER TABLE anime_series
 ;
 GO
 
-ALTER TABLE AnimeSeason
-    ADD CONSTRAINT anime_season_id PRIMARY KEY (anime_series_id, season_number)
+ALTER TABLE anime_season
+    ADD CONSTRAINT anime_season_id PRIMARY KEY (anime_series_id, anime_season_number)
 ;
 GO
 
 ALTER TABLE anime_character
-    ADD CONSTRAINT anime_character_id PRIMARY KEY (character_id)
+    ADD CONSTRAINT anime_character_id PRIMARY KEY (anime_character_id)
 ;
 GO
 
-ALTER TABLE CharacterInSeason
+ALTER TABLE character_in_season
     ADD CONSTRAINT anime_character_season_id PRIMARY KEY (cis_id),
     FOREIGN KEY (character_id) REFERENCES anime_character(character_id),
     FOREIGN KEY (anime_series_id, season_number) REFERENCES AnimeSeason(anime_series_id, season_number)
 ;
 GO
 
-ALTER TABLE HOFAttributes
-    ADD CONSTRAINT HOFAttributes_id PRIMARY KEY (cis_id)
+ALTER TABLE hof_attributes
+    ADD CONSTRAINT hof_attributes_id PRIMARY KEY (hof_attributes_id)
 ;
 GO
 
