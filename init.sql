@@ -23,12 +23,12 @@ GO
 
 CREATE TABLE [dbo].[anime_season]
 (
-  [anime_series_id] int NOT NULL,
-  [anime_season_number] smallint NOT NULL,
-  [anime_season_episodes] smallint NOT NULL,
-  [anime_season_episode_duration] time(0) NOT NULL,
-  [anime_season_rating] decimal(3,1) NOT NULL,
-  [anime_season_start_date] date NOT NULL,
+    [anime_series_id] int NOT NULL,
+    [anime_season_number] smallint NOT NULL,
+    [anime_season_episodes] smallint NOT NULL,
+    [anime_season_episode_duration] time(0) NOT NULL,
+    [anime_season_rating] decimal(3,1) NOT NULL,
+    [anime_season_start_date] date NOT NULL,
 );
 GO
 
@@ -40,10 +40,10 @@ CREATE TABLE [dbo].[anime_character] (
 GO
 
 CREATE TABLE [dbo].[character_in_season] (
-	[character_in_season_id] int IDENTITY(1,1) NOT NULL,
-	[anime_character_id] int NOT NULL,
-	[anime_series_id] int NOT NULL, 
-	[anime_season_number] smallint NOT NULL,
+    [character_in_season_id] int IDENTITY(1,1) NOT NULL,
+    [anime_character_id] int NOT NULL,
+    [anime_series_id] int NOT NULL, 
+    [anime_season_number] smallint NOT NULL,
 );
 GO
 
