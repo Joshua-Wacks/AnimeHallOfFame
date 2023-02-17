@@ -35,8 +35,7 @@ GO
 CREATE TABLE [dbo].[anime_character] (
     [anime_character_id] int IDENTITY(1,1),
     [anime_character_name] varchar(50) NOT NULL,
-    [anime_character_birthyear] smallint NOT NULL,
-    [fk_to_bridge_entity] int NOT NULL
+    [anime_character_birthyear] smallint NOT NULL
 );
 GO
 
