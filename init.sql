@@ -26,11 +26,11 @@ GO
 CREATE TABLE [dbo].[anime_season]
 (
   [anime_series_id] int NOT NULL,
-  [anime_season_number] int NOT NULL,
-  [anime_season_episodes] int NOT NULL,
+  [anime_season_number] smallint NOT NULL,
+  [anime_season_episodes] smallint NOT NULL,
   [anime_season_episode_duration] time(0) NOT NULL,
   [anime_season_rating] decimal(3,1) NOT NULL,
-  [anime_season_start_date] int NOT NULL,
+  [anime_season_start_date] date NOT NULL,
 );
 GO
 
@@ -46,18 +46,18 @@ CREATE TABLE [dbo].[character_in_season] (
 	[character_in_season_id] int IDENTITY(1,1) NOT NULL,
 	[anime_character_id] int NOT NULL,
 	[anime_series_id] int NOT NULL, 
-	[anime_season_number] int NOT NULL,
+	[anime_season_number] smallint NOT NULL,
 );
 GO
 
 CREATE TABLE [dbo].[hof_attributes] (
     [hof_attributes_id] int IDENTITY(1,1) NOT NULL,
-    [hof_attributes_impact] int NOT NULL,
-    [hof_attributes_purpose_fulfilled] int NOT NULL,
-    [hof_attributes_humour] int NOT NULL,
-    [hof_attributes_hairstyle] int NOT NULL,
-    [hof_attributes_lovelife] int NOT NULL,
-    [hof_attributes_networth] decimal(16,2) NOT NULL,
+    [hof_attributes_impact] tinyint NOT NULL,
+    [hof_attributes_purpose_fulfilled] tinyint NOT NULL,
+    [hof_attributes_humour] tinyint NOT NULL,
+    [hof_attributes_hairstyle] tinyint NOT NULL,
+    [hof_attributes_lovelife] tinyint NOT NULL,
+    [hof_attributes_networth] int NOT NULL,
     [hof_attributes_hof_average] decimal(5,2) NULL,
     
     CONSTRAINT impact_interval CHECK(hof_attributes_impact>=-100 AND hof_attributes_impact<=100),
