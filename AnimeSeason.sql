@@ -1,3 +1,4 @@
+
 CREATE TABLE [dbo].[AnimeSeason]
 (
   [AnimeId] INT NOT NULL,
