@@ -4,13 +4,12 @@ GO
 DROP TABLE IF EXISTS AnimeSeason;
 GO
 
-CREATE TABLE dbo.AnimeSeason
+CREATE TABLE anime_season
 (
-  anime_id INT IDENTITY(1,1) NOT NULL,
-  season_number INT NOT NULL,
-  episodes INT NOT NULL,
-  episode_duration TIME(0) NOT NULL,
-  rating DECIMAL(3,1) NOT NULL,
-  year_released INT NOT NULL,
-  CONSTRAINT PK_AnimeSeason PRIMARY KEY (anime_id, season_number)
+  anime_series_id int IDENTITY(1,1) NOT NULL,
+  anime_season_numberr int NOT NULL,
+  anime_season_episodes int NOT NULL,
+  anime_season_episode_duration time(0) NOT NULL,
+  anime_season_rating decimal(3,1) NOT NULL,
+  anime_season_start_date int NOT NULL
 );
