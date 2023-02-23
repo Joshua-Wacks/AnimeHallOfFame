@@ -1,3 +1,6 @@
+USE AnimeHallOfFame;
+GO
+
 DROP PROCEDURE IF EXISTS anime_series_insert
 DROP PROCEDURE IF EXISTS anime_season_insert
 DROP PROCEDURE IF EXISTS anime_character_insert
@@ -29,7 +32,8 @@ CREATE PROCEDURE anime_season_insert (
   @anime_series_id int,
   @number smallint,
   @episodes smallint,
-  @rating smallint,
+  @duration tinyint,
+  @rating tinyint,
   @start_year smallint)
 AS
 
@@ -38,12 +42,14 @@ BEGIN
     anime_series_id,
     anime_season_number,
     anime_season_episodes,
+    anime_season_episode_duration_minutes,
     anime_season_rating,
     anime_season_start_year)
   VALUES (
     @anime_series_id,
     @number,
     @episodes,
+    @duration,
     @rating,
     @start_year)
 END
@@ -83,6 +89,7 @@ END
 GO
 
 CREATE PROCEDURE hof_attributes_insert (
+  @id int,
   @impact tinyint,
   @purpose_fulfilled tinyint,
   @humour tinyint,
@@ -93,6 +100,7 @@ AS
 
 BEGIN
   INSERT INTO hof_attributes(
+    character_in_season_id,
     hof_attributes_impact,
     hof_attributes_purpose_fulfilled,
     hof_attributes_humour,
@@ -100,6 +108,7 @@ BEGIN
     hof_attributes_lovelife,
     hof_attributes_networth)
   VALUES (
+    @id,
     @impact,
     @purpose_fulfilled,
     @humour,
