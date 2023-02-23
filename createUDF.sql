@@ -1,7 +1,10 @@
-DROP FUNCTION IF EXISTS dbo.get_hof_rating
+USE AnimeHallOfFame;
 GO
 
-CREATE FUNCTION dbo.get_hof_rating (
+DROP FUNCTION IF EXISTS get_hof_rating;
+GO
+
+CREATE FUNCTION get_hof_rating (
     @cis_id int
 )
 RETURNS DECIMAL(5,2)
@@ -13,4 +16,3 @@ BEGIN
 				WHERE character_in_season_id = @cis_id
     RETURN @Average
 END;
-GO
