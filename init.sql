@@ -50,11 +50,11 @@ GO
 
 CREATE TABLE [dbo].[hof_attributes] (
     [hof_attributes_id] int IDENTITY(1,1) NOT NULL,
-    [hof_attributes_impact] tinyint NOT NULL,
-    [hof_attributes_purpose_fulfilled] tinyint NOT NULL,
-    [hof_attributes_humour] tinyint NOT NULL,
-    [hof_attributes_hairstyle] tinyint NOT NULL,
-    [hof_attributes_lovelife] tinyint NOT NULL,
+    [hof_attributes_impact] int NOT NULL,
+    [hof_attributes_purpose_fulfilled] int NOT NULL,
+    [hof_attributes_humour] int NOT NULL,
+    [hof_attributes_hairstyle] int NOT NULL,
+    [hof_attributes_lovelife] int NOT NULL,
     [hof_attributes_networth] int NOT NULL,
     [character_in_season_id] int NOT NULL,
     
