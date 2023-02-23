@@ -16,7 +16,7 @@ GO
 CREATE TABLE [dbo].[anime_series] (
     [anime_series_id] int IDENTITY(1,1) NOT NULL,
     [anime_series_name] varchar(120),
-    [anime_series_description] varchar(8000),
+    [anime_series_description] varchar(2000),
     [anime_series_ongoing] bit,
 )
 GO
@@ -27,14 +27,14 @@ CREATE TABLE [dbo].[anime_season]
     [anime_season_number] smallint NOT NULL,
     [anime_season_episodes] smallint NOT NULL,
     [anime_season_episode_duration] time(0) NOT NULL,
-    [anime_season_rating] decimal(3,1) NOT NULL,
+    [anime_season_rating] smallint,
     [anime_season_start_date] date NOT NULL,
 );
 GO
 
 CREATE TABLE [dbo].[anime_character] (
     [anime_character_id] int IDENTITY(1,1),
-    [anime_character_name] varchar(50) NOT NULL,
+    [anime_character_name] varchar(200) NOT NULL,
     [anime_character_birthyear] smallint NOT NULL
 );
 GO
@@ -85,7 +85,7 @@ ALTER TABLE anime_character
 GO
 
 ALTER TABLE character_in_season
-    ADD CONSTRAINT anime_character_season_id PRIMARY KEY (cis_id),
+    ADD CONSTRAINT anime_character_season_id PRIMARY KEY (character_in_season_id),
     FOREIGN KEY (character_id) REFERENCES anime_character(character_id),
     FOREIGN KEY (anime_series_id, season_number) REFERENCES anime_season(anime_series_id, season_number)
 ;
@@ -107,4 +107,3 @@ GO
 --  CONSTRAINT [PK_AnimeSeason] PRIMARY KEY ([AnimeId], [SeasonNumber])
 -- Add PK to CharacterInSeries
 -- Add checks to all tables
-
