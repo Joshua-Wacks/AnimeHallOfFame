@@ -1,441 +1,441 @@
 -------------------- anime: Attack on Titan --------------------
 
 INSERT INTO anime_series
-VALUES ('Attack on Titan', 'Set in a post-apocalyptic world where the remains of humanity live behind walls protecting them from giant humanoid Titans, Attack on Titan follows protagonist Eren Yeager, along with friends Mikasa Ackerman and Armin Arlert', 1)
+VALUES ('Attack on Titan', 'Set in a post-apocalyptic world where the remains of humanity live behind walls protecting them from giant humanoid Titans, Attack on Titan follows protagonist Eren Yeager, along with friends Mikasa Ackerman and Armin Arlert', 1, 0)
 
 -------------------- season: 1 --------------------
 
 INSERT INTO anime_season
-VALUES (1, 1, 22, 23, 3, 2009)
+VALUES (1, 1, 15, 24, 1, 2001)
 
 INSERT INTO anime_character
-VALUES ('Eren Jaeger', 2076)
+VALUES ('Eren Jaeger', 1926)
 
 INSERT INTO character_in_season
 VALUES (1, 1, 1)
 
 INSERT INTO hof_attributes
-VALUES (37, 78, 51, 9, 77, 7, 0)
+VALUES (52, 63, 45, 2, 93, 54, 1)
 
 INSERT INTO anime_character
-VALUES ('Mikasa Ackerman', 2045)
+VALUES ('Mikasa Ackerman', 2027)
 
 INSERT INTO character_in_season
 VALUES (2, 1, 1)
 
 INSERT INTO hof_attributes
-VALUES (2, 47, 74, 91, 29, 55, 0)
+VALUES (39, 75, 21, 75, 100, 56, 2)
 
 INSERT INTO anime_character
-VALUES ('Erwin Smith', 1977)
+VALUES ('Erwin Smith', 2019)
 
 INSERT INTO character_in_season
 VALUES (3, 1, 1)
 
 INSERT INTO hof_attributes
-VALUES (37, 48, 94, 15, 94, 77, 0)
+VALUES (87, 18, 24, 62, 22, 95, 3)
 
 INSERT INTO anime_character
-VALUES ('Reiner Braun', 2016)
+VALUES ('Reiner Braun', 2045)
 
 INSERT INTO character_in_season
 VALUES (4, 1, 1)
 
 INSERT INTO hof_attributes
-VALUES (45, 85, 57, 77, 85, 64, 0)
+VALUES (85, 42, 50, 68, 15, 24, 4)
 
 INSERT INTO anime_character
-VALUES ('Armen Arlert', 2047)
+VALUES ('Armen Arlert', 1916)
 
 INSERT INTO character_in_season
 VALUES (5, 1, 1)
 
 INSERT INTO hof_attributes
-VALUES (64, 61, 44, 44, 70, 9, 0)
+VALUES (37, 11, 70, 31, 83, 39, 5)
 
 -------------------- season: 2 --------------------
 
 INSERT INTO anime_season
-VALUES (1, 2, 24, 23, 1, 2001)
+VALUES (1, 2, 17, 22, 5, 2002)
 
 INSERT INTO character_in_season
 VALUES (1, 1, 2)
 
 INSERT INTO hof_attributes
-VALUES (27, 91, 10, 89, 98, 98, 0)
+VALUES (51, 33, 8, 71, 30, 62, 6)
 
 INSERT INTO character_in_season
 VALUES (2, 1, 2)
 
 INSERT INTO hof_attributes
-VALUES (70, 70, 24, 38, 73, 72, 0)
+VALUES (75, 19, 50, 84, 67, 9, 7)
 
 INSERT INTO anime_character
-VALUES ('Levi Ackerman', 1966)
+VALUES ('Levi Ackerman', 1909)
 
 INSERT INTO character_in_season
 VALUES (6, 1, 2)
 
 INSERT INTO hof_attributes
-VALUES (33, 41, 73, 35, 56, 41, 0)
+VALUES (0, 80, 52, 96, 44, 69, 8)
 
 INSERT INTO anime_character
-VALUES ('Sasha Braus', 1965)
+VALUES ('Sasha Braus', 2039)
 
 INSERT INTO character_in_season
 VALUES (7, 1, 2)
 
 INSERT INTO hof_attributes
-VALUES (83, 25, 85, 90, 92, 45, 0)
+VALUES (18, 5, 35, 11, 94, 90, 9)
 
 INSERT INTO character_in_season
 VALUES (5, 1, 2)
 
 INSERT INTO hof_attributes
-VALUES (11, 50, 9, 9, 10, 36, 0)
+VALUES (82, 58, 97, 51, 67, 88, 10)
 
 -------------------- season: 3 --------------------
 
 INSERT INTO anime_season
-VALUES (1, 3, 13, 21, 0, 2006)
+VALUES (1, 3, 21, 20, 9, 2018)
 
 INSERT INTO character_in_season
 VALUES (1, 1, 3)
 
 INSERT INTO hof_attributes
-VALUES (70, 50, 49, 44, 47, 43, 0)
+VALUES (54, 33, 72, 36, 61, 97, 11)
 
 INSERT INTO character_in_season
 VALUES (2, 1, 3)
 
 INSERT INTO hof_attributes
-VALUES (53, 18, 77, 43, 80, 30, 0)
+VALUES (32, 4, 46, 12, 11, 52, 12)
 
 INSERT INTO character_in_season
 VALUES (7, 1, 3)
 
 INSERT INTO hof_attributes
-VALUES (100, 15, 94, 2, 97, 3, 0)
+VALUES (21, 97, 29, 57, 7, 92, 13)
 
 INSERT INTO anime_character
-VALUES ('Connie Springer', 1917)
+VALUES ('Connie Springer', 2069)
 
 INSERT INTO character_in_season
 VALUES (8, 1, 3)
 
 INSERT INTO hof_attributes
-VALUES (15, 32, 89, 97, 49, 18, 0)
+VALUES (66, 28, 24, 88, 20, 39, 14)
 
 INSERT INTO character_in_season
 VALUES (5, 1, 3)
 
 INSERT INTO hof_attributes
-VALUES (80, 15, 18, 35, 74, 69, 0)
+VALUES (18, 0, 72, 84, 48, 73, 15)
 
 -------------------- season: 4 --------------------
 
 INSERT INTO anime_season
-VALUES (1, 4, 22, 22, 10, 2011)
+VALUES (1, 4, 16, 21, 0, 2000)
 
 INSERT INTO character_in_season
 VALUES (1, 1, 4)
 
 INSERT INTO hof_attributes
-VALUES (39, 96, 78, 20, 83, 85, 0)
+VALUES (45, 30, 13, 26, 61, 60, 16)
 
 INSERT INTO character_in_season
 VALUES (2, 1, 4)
 
 INSERT INTO hof_attributes
-VALUES (32, 72, 40, 71, 72, 34, 0)
+VALUES (24, 36, 14, 74, 33, 60, 17)
 
 INSERT INTO character_in_season
 VALUES (6, 1, 4)
 
 INSERT INTO hof_attributes
-VALUES (22, 2, 100, 40, 52, 100, 0)
+VALUES (51, 0, 25, 23, 24, 27, 18)
 
 INSERT INTO character_in_season
 VALUES (4, 1, 4)
 
 INSERT INTO hof_attributes
-VALUES (67, 66, 51, 94, 33, 26, 0)
+VALUES (61, 34, 50, 81, 4, 74, 19)
 
 INSERT INTO character_in_season
 VALUES (5, 1, 4)
 
 INSERT INTO hof_attributes
-VALUES (77, 79, 82, 69, 49, 67, 0)
+VALUES (28, 65, 43, 35, 60, 88, 20)
 
 -------------------- anime: Naruto --------------------
 
 INSERT INTO anime_series
-VALUES ('Naruto', 'On the day of Naruto Uzamakis birth the village of Konoha was attacked by the 9-tailed fox demon. In order to protect the village Narutos father the 4th hokage sacrificed his life and sealed the demon in his new born son. 13 years later Naruto graduates the ninja academy and becomes a shinobi with goal to be the hokage of the village. Joining him are rival Sasuke Uchiha who attempts to gain power to avenge his clan after they were murdered by his older brother Itachi. And Sakura Haruno who is Narutos love interest who of course loves his rival Sasuke.', 0)
+VALUES ('Naruto', 'On the day of Naruto Uzamakis birth the village of Konoha was attacked by the 9-tailed fox demon. In order to protect the village Narutos father the 4th hokage sacrificed his life and sealed the demon in his new born son. 13 years later Naruto graduates the ninja academy and becomes a shinobi with goal to be the hokage of the village. Joining him are rival Sasuke Uchiha who attempts to gain power to avenge his clan after they were murdered by his older brother Itachi. And Sakura Haruno who is Narutos love interest who of course loves his rival Sasuke.', 0, 0)
 
 -------------------- season: 1 --------------------
 
 INSERT INTO anime_season
-VALUES (2, 1, 15, 24, 2, 2004)
+VALUES (2, 1, 19, 21, 5, 2000)
 
 INSERT INTO anime_character
-VALUES ('Kakashi Hatake', 2066)
+VALUES ('Kakashi Hatake', 1932)
 
 INSERT INTO character_in_season
 VALUES (9, 2, 1)
 
 INSERT INTO hof_attributes
-VALUES (33, 15, 24, 25, 28, 8, 0)
+VALUES (35, 56, 53, 2, 86, 86, 21)
 
 INSERT INTO anime_character
-VALUES ('Naruto Uzumaki', 1995)
+VALUES ('Naruto Uzumaki', 2012)
 
 INSERT INTO character_in_season
 VALUES (10, 2, 1)
 
 INSERT INTO hof_attributes
-VALUES (74, 90, 65, 47, 97, 40, 0)
+VALUES (85, 73, 96, 46, 4, 9, 22)
 
 INSERT INTO anime_character
-VALUES ('Might Guy', 1946)
+VALUES ('Might Guy', 2060)
 
 INSERT INTO character_in_season
 VALUES (11, 2, 1)
 
 INSERT INTO hof_attributes
-VALUES (98, 76, 56, 6, 30, 62, 0)
+VALUES (16, 73, 54, 78, 95, 61, 23)
 
 INSERT INTO anime_character
-VALUES ('Sasuke Uchiha', 1904)
+VALUES ('Sasuke Uchiha', 1906)
 
 INSERT INTO character_in_season
 VALUES (12, 2, 1)
 
 INSERT INTO hof_attributes
-VALUES (47, 53, 5, 4, 96, 0, 0)
+VALUES (88, 31, 73, 76, 63, 69, 24)
 
 INSERT INTO anime_character
-VALUES ('Gaara', 1922)
+VALUES ('Gaara', 1956)
 
 INSERT INTO character_in_season
 VALUES (13, 2, 1)
 
 INSERT INTO hof_attributes
-VALUES (17, 27, 8, 42, 82, 49, 0)
+VALUES (90, 11, 76, 18, 10, 67, 25)
 
 -------------------- season: 2 --------------------
 
 INSERT INTO anime_season
-VALUES (2, 2, 19, 21, 2, 2019)
+VALUES (2, 2, 12, 20, 3, 2013)
 
 INSERT INTO character_in_season
 VALUES (9, 2, 2)
 
 INSERT INTO hof_attributes
-VALUES (64, 51, 84, 74, 83, 86, 0)
+VALUES (88, 78, 29, 4, 24, 18, 26)
 
 INSERT INTO character_in_season
 VALUES (10, 2, 2)
 
 INSERT INTO hof_attributes
-VALUES (57, 33, 10, 29, 8, 41, 0)
+VALUES (24, 51, 20, 4, 76, 55, 27)
 
 INSERT INTO anime_character
-VALUES ('Shikamaru Nara', 2042)
+VALUES ('Shikamaru Nara', 1949)
 
 INSERT INTO character_in_season
 VALUES (14, 2, 2)
 
 INSERT INTO hof_attributes
-VALUES (84, 82, 35, 40, 73, 6, 0)
+VALUES (73, 45, 70, 79, 38, 27, 28)
 
 INSERT INTO anime_character
-VALUES ('Rock Lee', 2048)
+VALUES ('Rock Lee', 2030)
 
 INSERT INTO character_in_season
 VALUES (15, 2, 2)
 
 INSERT INTO hof_attributes
-VALUES (95, 90, 28, 48, 58, 11, 0)
+VALUES (73, 3, 32, 98, 2, 74, 29)
 
 INSERT INTO character_in_season
 VALUES (13, 2, 2)
 
 INSERT INTO hof_attributes
-VALUES (85, 66, 74, 85, 64, 80, 0)
+VALUES (20, 19, 26, 82, 94, 39, 30)
 
 -------------------- anime: Hunter x Hunter --------------------
 
 INSERT INTO anime_series
-VALUES ('Hunter x Hunter', 'he story focuses on a young boy named Gon Freecss who discovers that his father, who left him at a young age, is actually a world-renowned Hunter, a licensed professional who specializes in fantastical pursuits such as locating rare or unidentified animal species, treasure hunting, surveying unexplored enclaves, or hunting down lawless individuals. Gon departs on a journey to become a Hunter and eventually find his father. Along the way, Gon meets various other Hunters and encounters the paranormal.', 0)
+VALUES ('Hunter x Hunter', 'he story focuses on a young boy named Gon Freecss who discovers that his father, who left him at a young age, is actually a world-renowned Hunter, a licensed professional who specializes in fantastical pursuits such as locating rare or unidentified animal species, treasure hunting, surveying unexplored enclaves, or hunting down lawless individuals. Gon departs on a journey to become a Hunter and eventually find his father. Along the way, Gon meets various other Hunters and encounters the paranormal.', 0, 0)
 
 -------------------- season: 1 --------------------
 
 INSERT INTO anime_season
-VALUES (3, 1, 16, 22, 3, 2017)
+VALUES (3, 1, 14, 20, 2, 2011)
 
 INSERT INTO anime_character
-VALUES ('Gon Freecss', 2084)
+VALUES ('Gon Freecss', 1913)
 
 INSERT INTO character_in_season
 VALUES (16, 3, 1)
 
 INSERT INTO hof_attributes
-VALUES (91, 26, 81, 13, 7, 12, 0)
+VALUES (84, 16, 72, 100, 97, 48, 31)
 
 INSERT INTO anime_character
-VALUES ('Killua Zoldyck', 2046)
+VALUES ('Killua Zoldyck', 1992)
 
 INSERT INTO character_in_season
 VALUES (17, 3, 1)
 
 INSERT INTO hof_attributes
-VALUES (21, 52, 33, 83, 75, 52, 0)
+VALUES (46, 99, 58, 64, 94, 54, 32)
 
 INSERT INTO anime_character
-VALUES ('Hisoka Morow', 1985)
+VALUES ('Hisoka Morow', 1987)
 
 INSERT INTO character_in_season
 VALUES (18, 3, 1)
 
 INSERT INTO hof_attributes
-VALUES (45, 22, 13, 58, 43, 23, 0)
+VALUES (57, 89, 14, 72, 6, 15, 33)
 
 INSERT INTO anime_character
-VALUES ('Kurapika', 2023)
+VALUES ('Kurapika', 2094)
 
 INSERT INTO character_in_season
 VALUES (19, 3, 1)
 
 INSERT INTO hof_attributes
-VALUES (37, 66, 26, 31, 50, 26, 0)
+VALUES (42, 18, 38, 97, 3, 44, 34)
 
 INSERT INTO anime_character
-VALUES ('Leorio Paladiknight', 2007)
+VALUES ('Leorio Paladiknight', 2027)
 
 INSERT INTO character_in_season
 VALUES (20, 3, 1)
 
 INSERT INTO hof_attributes
-VALUES (45, 17, 94, 92, 16, 32, 0)
+VALUES (94, 28, 7, 73, 88, 100, 35)
 
 -------------------- anime: Jujutsu Kaisen --------------------
 
 INSERT INTO anime_series
-VALUES ('Jujutsu Kaisen', 'Yuji Itadori, a kind-hearted teenager, joins his schools Occult Club for fun, but discovers that its members are actual sorcerers who can manipulate the energy between beings for their own use. He hears about a cursed talisman - the finger of Sukuna, a demon - and its being targeted by other cursed beings. Yuji eats the finger to protect his friends, and ends up becoming Sukunas host. However, Yuji discovers that he has inherited magic and is able to control this power without interference from Sukuna. He joins the Tokyo Metropolitan Magic Technical College to consumes all of Sukunas fingers, which will enable a full exorcism to take place that will free him.', 1)
+VALUES ('Jujutsu Kaisen', 'Yuji Itadori, a kind-hearted teenager, joins his schools Occult Club for fun, but discovers that its members are actual sorcerers who can manipulate the energy between beings for their own use. He hears about a cursed talisman - the finger of Sukuna, a demon - and its being targeted by other cursed beings. Yuji eats the finger to protect his friends, and ends up becoming Sukunas host. However, Yuji discovers that he has inherited magic and is able to control this power without interference from Sukuna. He joins the Tokyo Metropolitan Magic Technical College to consumes all of Sukunas fingers, which will enable a full exorcism to take place that will free him.', 1, 0)
 
 -------------------- season: 1 --------------------
 
 INSERT INTO anime_season
-VALUES (4, 1, 24, 22, 3, 2015)
+VALUES (4, 1, 23, 20, 4, 2021)
 
 INSERT INTO anime_character
-VALUES ('Yuji Itadori', 2084)
+VALUES ('Yuji Itadori', 2095)
 
 INSERT INTO character_in_season
 VALUES (21, 4, 1)
 
 INSERT INTO hof_attributes
-VALUES (66, 0, 56, 76, 89, 64, 0)
+VALUES (3, 92, 77, 13, 27, 26, 36)
 
 INSERT INTO anime_character
-VALUES ('Megumi Fushiguro', 1992)
+VALUES ('Megumi Fushiguro', 1903)
 
 INSERT INTO character_in_season
 VALUES (22, 4, 1)
 
 INSERT INTO hof_attributes
-VALUES (88, 0, 94, 32, 98, 69, 0)
+VALUES (74, 50, 18, 81, 7, 50, 37)
 
 INSERT INTO anime_character
-VALUES ('Nobara Kugisaki', 1908)
+VALUES ('Nobara Kugisaki', 1921)
 
 INSERT INTO character_in_season
 VALUES (23, 4, 1)
 
 INSERT INTO hof_attributes
-VALUES (66, 25, 57, 58, 86, 11, 0)
+VALUES (26, 91, 74, 68, 2, 42, 38)
 
 INSERT INTO anime_character
-VALUES ('Satoru Gojo', 1928)
+VALUES ('Satoru Gojo', 1956)
 
 INSERT INTO character_in_season
 VALUES (24, 4, 1)
 
 INSERT INTO hof_attributes
-VALUES (96, 24, 52, 85, 58, 58, 0)
+VALUES (65, 86, 8, 0, 4, 100, 39)
 
 -------------------- anime: Demon Slayer --------------------
 
 INSERT INTO anime_series
-VALUES ('Demon Slayer', 'A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.', 1)
+VALUES ('Demon Slayer', 'A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.', 1, 0)
 
 -------------------- season: 1 --------------------
 
 INSERT INTO anime_season
-VALUES (5, 1, 18, 22, 3, 2022)
+VALUES (5, 1, 22, 21, 0, 2009)
 
 INSERT INTO anime_character
-VALUES ('Tanjiro Kamado', 2095)
+VALUES ('Tanjiro Kamado', 2015)
 
 INSERT INTO character_in_season
 VALUES (25, 5, 1)
 
 INSERT INTO hof_attributes
-VALUES (30, 54, 97, 3, 65, 61, 0)
+VALUES (28, 65, 20, 19, 65, 17, 40)
 
 INSERT INTO anime_character
-VALUES ('Nezuko Kamado', 2067)
+VALUES ('Nezuko Kamado', 1973)
 
 INSERT INTO character_in_season
 VALUES (26, 5, 1)
 
 INSERT INTO hof_attributes
-VALUES (28, 81, 79, 99, 55, 3, 0)
+VALUES (63, 36, 99, 83, 5, 55, 41)
 
 INSERT INTO anime_character
-VALUES ('Zenitsu Agatsuma', 1973)
+VALUES ('Zenitsu Agatsuma', 1964)
 
 INSERT INTO character_in_season
 VALUES (27, 5, 1)
 
 INSERT INTO hof_attributes
-VALUES (20, 12, 53, 30, 95, 40, 0)
+VALUES (19, 92, 92, 91, 92, 38, 42)
 
 INSERT INTO anime_character
-VALUES ('Inosuke Hashibira', 2062)
+VALUES ('Inosuke Hashibira', 2029)
 
 INSERT INTO character_in_season
 VALUES (28, 5, 1)
 
 INSERT INTO hof_attributes
-VALUES (94, 78, 58, 55, 85, 10, 0)
+VALUES (13, 9, 3, 34, 48, 90, 43)
 
 -------------------- season: 2 --------------------
 
 INSERT INTO anime_season
-VALUES (5, 2, 13, 23, 8, 2022)
+VALUES (5, 2, 18, 21, 0, 2015)
 
 INSERT INTO character_in_season
 VALUES (25, 5, 2)
 
 INSERT INTO hof_attributes
-VALUES (48, 8, 44, 67, 98, 69, 0)
+VALUES (54, 54, 9, 75, 99, 25, 44)
 
 INSERT INTO character_in_season
 VALUES (26, 5, 2)
 
 INSERT INTO hof_attributes
-VALUES (48, 21, 3, 36, 85, 60, 0)
+VALUES (94, 11, 32, 97, 25, 91, 45)
 
 INSERT INTO character_in_season
 VALUES (27, 5, 2)
 
 INSERT INTO hof_attributes
-VALUES (8, 7, 35, 72, 4, 72, 0)
+VALUES (26, 75, 85, 7, 67, 56, 46)
 
 INSERT INTO character_in_season
 VALUES (28, 5, 2)
 
 INSERT INTO hof_attributes
-VALUES (3, 94, 29, 61, 77, 34, 0)
+VALUES (38, 82, 47, 27, 77, 23, 47)
 
