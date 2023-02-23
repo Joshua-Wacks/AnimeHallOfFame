@@ -52,12 +52,13 @@ anime_info = {
 f = open("data_generator.sql", "w")
 sql = ""
 inserted_characters = []
+char_in_season_id = 1
 
 for key in anime_info:
     anime = anime_info[key]
     sql += f"-------------------- anime: {anime['anime_series_name']} --------------------\n\n"
     sql += "INSERT INTO anime_series\n" \
-        f"VALUES ('{anime['anime_series_name']}', '{anime['anime_series_description']}', {anime['anime_series_ongoing']})\n\n"
+        f"VALUES ('{anime['anime_series_name']}', '{anime['anime_series_description']}', {anime['anime_series_ongoing']}, 0)\n\n"
     
     for season in anime["anime_seasons"]:
         sql += f"-------------------- season: {season} --------------------\n\n"
@@ -86,7 +87,8 @@ for key in anime_info:
             networth = randint(0, 100)
 
             sql += "INSERT INTO hof_attributes\n" \
-                f"VALUES ({impact}, {purpose_fulfilled}, {humour}, {hairstyle}, {lovelife}, {networth}, 0)\n\n"
+                f"VALUES ({impact}, {purpose_fulfilled}, {humour}, {hairstyle}, {lovelife}, {networth}, {char_in_season_id})\n\n"
+            char_in_season_id += 1
 
 f.write(sql)
 f.close()

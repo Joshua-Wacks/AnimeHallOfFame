@@ -18,17 +18,18 @@ CREATE TABLE [dbo].[anime_series] (
     [anime_series_name] varchar(120),
     [anime_series_description] varchar(8000),
     [anime_series_ongoing] bit,
+    [anime_series_rating] decimal(5,2) DEFAULT 0
 );
 GO
 
 CREATE TABLE [dbo].[anime_season]
 (
     [anime_series_id] int NOT NULL,
-    [anime_season_number] tinyint NOT NULL,
+    [anime_season_number] smallint NOT NULL,
     [anime_season_episodes] smallint NOT NULL,
-    [anime_season_episode_duration] tinyint NOT NULL,
+    [anime_season_episode_duration(minutes)] tinyint NOT NULL,
     [anime_season_rating] tinyint NOT NULL,
-    [anime_season_start_date] smallint NOT NULL,
+    [anime_season_start_year] smallint NOT NULL
 );
 GO
 
@@ -43,7 +44,7 @@ CREATE TABLE [dbo].[character_in_season] (
     [character_in_season_id] int IDENTITY(1,1) NOT NULL,
     [anime_character_id] int NOT NULL,
     [anime_series_id] int NOT NULL, 
-    [anime_season_number] tinyint NOT NULL,
+    [anime_season_number] smallint NOT NULL,
 );
 GO
 
@@ -55,7 +56,7 @@ CREATE TABLE [dbo].[hof_attributes] (
     [hof_attributes_hairstyle] tinyint NOT NULL,
     [hof_attributes_lovelife] tinyint NOT NULL,
     [hof_attributes_networth] int NOT NULL,
-    [hof_attributes_hof_average] decimal(5,2) NULL,
+    [character_in_season_id] int NOT NULL,
     
     CONSTRAINT impact_interval CHECK(hof_attributes_impact>=0 AND hof_attributes_impact<=100),
     CONSTRAINT purpose_fulfilled_interval CHECK(hof_attributes_purpose_fulfilled>=0 AND hof_attributes_purpose_fulfilled<=100),
@@ -84,5 +85,6 @@ ALTER TABLE character_in_season
 GO
 
 ALTER TABLE hof_attributes
-    ADD CONSTRAINT hof_attributes_id PRIMARY KEY (hof_attributes_id);
+    ADD CONSTRAINT hof_attributes_id PRIMARY KEY (hof_attributes_id),
+    FOREIGN KEY (character_in_season_id) REFERENCES character_in_season(character_in_season_id)
 GO
