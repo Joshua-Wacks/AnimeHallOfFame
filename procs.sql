@@ -1,4 +1,12 @@
-ALTER PROCEDURE anime_series_insert (
+DROP PROCEDURE IF EXISTS anime_series_insert
+DROP PROCEDURE IF EXISTS anime_season_insert
+DROP PROCEDURE IF EXISTS anime_character_insert
+DROP PROCEDURE IF EXISTS character_in_season_insert
+DROP PROCEDURE IF EXISTS hof_attributes_insert
+
+GO
+
+CREATE PROCEDURE anime_series_insert (
   @name varchar(120),
   @description varchar(2000),
   @ongoing bit)
@@ -15,14 +23,14 @@ BEGIN
     @description,
     @ongoing)
 END
+GO
 
-ALTER PROCEDURE anime_season_insert (
+CREATE PROCEDURE anime_season_insert (
   @anime_series_id int,
   @number smallint,
   @episodes smallint,
-  @episode_duration time(0),
   @rating smallint,
-  @start_date date)
+  @start_year smallint)
 AS
 
 BEGIN
@@ -30,19 +38,18 @@ BEGIN
     anime_series_id,
     anime_season_number,
     anime_season_episodes,
-    anime_season_episode_duration,
     anime_season_rating,
-    anime_season_start_date)
+    anime_season_start_year)
   VALUES (
     @anime_series_id,
     @number,
     @episodes,
-    @episode_duration,
     @rating,
-    @start_date)
+    @start_year)
 END
+GO
 
-ALTER PROCEDURE anime_character_insert (
+CREATE PROCEDURE anime_character_insert (
   @name varchar(200),
   @birthyear smallint)
 AS
@@ -55,8 +62,9 @@ BEGIN
     @name,
     @birthyear)
 END
+GO
 
-ALTER PROCEDURE character_in_season_insert (
+CREATE PROCEDURE character_in_season_insert (
   @anime_character_id int,
   @anime_series_id int, 
   @anime_season_number smallint)
@@ -72,8 +80,9 @@ BEGIN
     @anime_series_id, 
     @anime_season_number)
 END
+GO
 
-ALTER PROCEDURE hof_attributes_insert (
+CREATE PROCEDURE hof_attributes_insert (
   @impact tinyint,
   @purpose_fulfilled tinyint,
   @humour tinyint,
@@ -83,13 +92,13 @@ ALTER PROCEDURE hof_attributes_insert (
 AS
 
 BEGIN
-  INSERT INTO anime_character (
+  INSERT INTO hof_attributes(
     hof_attributes_impact,
     hof_attributes_purpose_fulfilled,
     hof_attributes_humour,
     hof_attributes_hairstyle,
     hof_attributes_lovelife,
-    hof_attributes_networth,)
+    hof_attributes_networth)
   VALUES (
     @impact,
     @purpose_fulfilled,
@@ -98,3 +107,4 @@ BEGIN
     @lovelife,
     @networth)
 END
+GO
