@@ -1,3 +1,8 @@
+USE AnimeHallOfFame;
+GO
+
+DROP TABLE IF EXISTS AnimeSeason;
+GO
 CREATE FUNCTION dbo.GetAverageRating
 (
   @anime_id INT
