@@ -57,7 +57,7 @@ for key in anime_info:
     anime = anime_info[key]
     sql += f"-------------------- anime: {anime['anime_series_name']} --------------------\n\n"
     sql += "INSERT INTO anime_series\n" \
-        f"VALUES (\"{anime['anime_series_name']}\", \"{anime['anime_series_description']}\", {anime['anime_series_ongoing']})\n\n"
+        f"VALUES ('{anime['anime_series_name']}', '{anime['anime_series_description']}', {anime['anime_series_ongoing']})\n\n"
     
     for season in anime["anime_seasons"]:
         sql += f"-------------------- season: {season} --------------------\n\n"
