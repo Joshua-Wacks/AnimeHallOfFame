@@ -15,7 +15,7 @@ anime_info = {
     
     2:{
         "anime_series_name":"Naruto",
-        "anime_series_description":"On the day of Naruto Uzamaki's birth the village of Konoha was attacked by the 9-tailed fox demon. In order to protect the village Naruto's father the 4th hokage sacrificed his life and sealed the demon in his new born son. 13 years later Naruto graduates the ninja academy and becomes a shinobi with goal to be the hokage of the village. Joining him are rival Sasuke Uchiha who attempts to gain power to avenge his clan after they were murdered by his older brother Itachi. And Sakura Haruno who is Naruto's love interest who of course loves his rival Sasuke.",
+        "anime_series_description":"On the day of Naruto Uzamakis birth the village of Konoha was attacked by the 9-tailed fox demon. In order to protect the village Narutos father the 4th hokage sacrificed his life and sealed the demon in his new born son. 13 years later Naruto graduates the ninja academy and becomes a shinobi with goal to be the hokage of the village. Joining him are rival Sasuke Uchiha who attempts to gain power to avenge his clan after they were murdered by his older brother Itachi. And Sakura Haruno who is Narutos love interest who of course loves his rival Sasuke.",
         "anime_series_ongoing":0,
         "anime_seasons":{
             1:["Kakashi Hatake", "Naruto Uzumaki", "Might Guy", "Sasuke Uchiha", "Gaara"],
@@ -32,7 +32,7 @@ anime_info = {
     },
     4:{
         "anime_series_name":"Jujutsu Kaisen",
-        "anime_series_description":"Yuji Itadori, a kind-hearted teenager, joins his school's Occult Club for fun, but discovers that its members are actual sorcerers who can manipulate the energy between beings for their own use. He hears about a cursed talisman - the finger of Sukuna, a demon - and its being targeted by other cursed beings. Yuji eats the finger to protect his friends, and ends up becoming Sukuna's host. However, Yuji discovers that he has inherited magic and is able to control this power without interference from Sukuna. He joins the Tokyo Metropolitan Magic Technical College to consumes all of Sukuna's fingers, which will enable a full exorcism to take place that will free him.",
+        "anime_series_description":"Yuji Itadori, a kind-hearted teenager, joins his schools Occult Club for fun, but discovers that its members are actual sorcerers who can manipulate the energy between beings for their own use. He hears about a cursed talisman - the finger of Sukuna, a demon - and its being targeted by other cursed beings. Yuji eats the finger to protect his friends, and ends up becoming Sukunas host. However, Yuji discovers that he has inherited magic and is able to control this power without interference from Sukuna. He joins the Tokyo Metropolitan Magic Technical College to consumes all of Sukunas fingers, which will enable a full exorcism to take place that will free him.",
         "anime_series_ongoing":1,
         "anime_seasons":{
             1:["Yuji Itadori", "Megumi Fushiguro", "Nobara Kugisaki", "Satoru Gojo"]
@@ -52,12 +52,13 @@ anime_info = {
 f = open("data_generator.sql", "w")
 sql = ""
 inserted_characters = []
+char_in_season_id = 1
 
 for key in anime_info:
     anime = anime_info[key]
     sql += f"-------------------- anime: {anime['anime_series_name']} --------------------\n\n"
     sql += "INSERT INTO anime_series\n" \
-        f"VALUES (\"{anime['anime_series_name']}\", \"{anime['anime_series_description']}\", {anime['anime_series_ongoing']})\n\n"
+        f"VALUES ('{anime['anime_series_name']}', '{anime['anime_series_description']}', {anime['anime_series_ongoing']}, 0)\n\n"
     
     for season in anime["anime_seasons"]:
         sql += f"-------------------- season: {season} --------------------\n\n"
@@ -73,7 +74,7 @@ for key in anime_info:
                 inserted_characters.append(character)
                 birthyear = randint(1900, 2100)
                 sql += "INSERT INTO anime_character\n" \
-                    f"VALUES ({character}, {birthyear})\n\n"
+                    f"VALUES ('{character}', {birthyear})\n\n"
 
             sql += "INSERT INTO character_in_season\n" \
                 f"VALUES ({inserted_characters.index(character)+1}, {key}, {season})\n\n"
@@ -86,7 +87,8 @@ for key in anime_info:
             networth = randint(0, 100)
 
             sql += "INSERT INTO hof_attributes\n" \
-                f"VALUES ({impact}, {purpose_fulfilled}, {humour}, {hairstyle}, {lovelife}, {networth}, 0)\n\n"
+                f"VALUES ({impact}, {purpose_fulfilled}, {humour}, {hairstyle}, {lovelife}, {networth}, {char_in_season_id})\n\n"
+            char_in_season_id += 1
 
 f.write(sql)
 f.close()
