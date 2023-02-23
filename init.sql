@@ -16,7 +16,7 @@ GO
 CREATE TABLE [dbo].[anime_series] (
     [anime_series_id] int IDENTITY(1,1) NOT NULL,
     [anime_series_name] varchar(120),
-    [anime_series_description] varchar(8000),
+    [anime_series_description] varchar(2000),
     [anime_series_ongoing] bit,
     [anime_series_rating] decimal(5,2) DEFAULT 0
 );
@@ -35,7 +35,7 @@ GO
 
 CREATE TABLE [dbo].[anime_character] (
     [anime_character_id] int IDENTITY(1,1),
-    [anime_character_name] varchar(50) NOT NULL,
+    [anime_character_name] varchar(200) NOT NULL,
     [anime_character_birthyear] smallint NOT NULL
 );
 GO
