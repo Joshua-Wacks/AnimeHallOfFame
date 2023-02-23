@@ -1,7 +1,6 @@
 CREATE VIEW RankedHOF
 AS
-    SELECT c.anime_character_name AS character, ser.anime_series_name AS anime, sea.anime_season_number AS season, hof.hof_attributes_id
-    FROM [anime_character] AS c
+    SELECT c.anime_character_name AS character, ser.anime_series_name AS anime, sea.anime_season_number AS season, get_hof_rating(b.character_in_season_id) AS rating
     JOIN [character_in_season] AS b
     ON c.anime_character_id = b.anime_character_id
     JOIN [anime_season] AS sea
