@@ -10,7 +10,7 @@ GO
 USE AnimeHallOfFame;
 GO
 
-SET NOCOUNT ON;
+SET NOCOUNT OFF;
 GO
 
 CREATE TABLE [dbo].[anime_series] (
