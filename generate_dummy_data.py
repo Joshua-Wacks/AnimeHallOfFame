@@ -56,6 +56,8 @@ char_in_season_id = 1
 
 for key in anime_info:
     anime = anime_info[key]
+    sql += "USE AnimeHallOfFame;\n" \
+        "GO\n\n"
     sql += f"-------------------- anime: {anime['anime_series_name']} --------------------\n\n"
     sql += "INSERT INTO anime_series\n" \
         f"VALUES ('{anime['anime_series_name']}', '{anime['anime_series_description']}', {anime['anime_series_ongoing']}, 0)\n\n"
